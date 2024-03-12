@@ -55,11 +55,11 @@ class Inventory {
      */
 
     /**
-     * 
+     * List shoes from the inventory, with optional filters.
      * @param {string=} brand If not null, limit to shoes of this brand. Case-sensitive.
      * @param {string=} model If not null, limit to shoes of this model. Case-sensitive.
      * @param {ShoeSize[]=} sizes If not null, limit to shoes that match any of the sizes in the list.
      * @returns {ShoeSearchResult[]} A list of matching shoes
      */
-    findShoe(brand=null, model=null, sizes=null) {}
+    listShoes(brand=null, model=null, sizes=null) {}
 }
