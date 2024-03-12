@@ -63,23 +63,3 @@ class Inventory {
      */
     findShoe(brand=null, model=null, sizes=null) {}
 }
-
-class InventoryManager {
-    /**
-     * 
-     * @param {Inventory} inventory 
-     */
-    constructor(inventory) {}
-
-    /**
-     * 
-     * @param {ShoeSpecification[]} shoeSpecs 
-     */
-    receiveShipment(shoeSpecs) {}
-
-    /**
-     * 
-     * @param {ShoeSpecification} shoeSpec 
-     */
-    sellShoe(shoeSpec) {}
-}
