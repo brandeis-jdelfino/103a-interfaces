@@ -1,18 +1,14 @@
 const ShoeSize = require('./interface');
 
 it('should convert from US to UK correctly', () => {
-    const shoeSizes = [
-        { us: 6, uk: 4 },
-        { us: 7, uk: 5 },
-        { us: 8, uk: 6 },
-        // more shoe sizes
-    ];
+    expect(ShoeSize.fromUsSize(6).ukSize()).toBe(4);
+    expect(ShoeSize.fromUkSize(4).usSize()).toBe(6);
 
-    shoeSizes.forEach((size) => {
-        const usSize = ShoeSize.fromUsSize(size.us);
-        expect(usSize.ukSize()).toBe(size.uk);
+    expect(ShoeSize.fromUsSize(7).ukSize()).toBe(5);
+    expect(ShoeSize.fromUkSize(5).usSize()).toBe(7);
 
-        const ukSize = ShoeSize.fromUkSize(size.uk);
-        expect(ukSize.usSize()).toBe(size.us);
-    });
+    expect(ShoeSize.fromUsSize(8).ukSize()).toBe(6);
+    expect(ShoeSize.fromUkSize(6).usSize()).toBe(8);
+    
+    // more cases...    
 });
