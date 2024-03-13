@@ -31,8 +31,8 @@ class ShoeSize {
      * @returns {number}
      */
     ukSize() {}
-
 }
+
 class Inventory {
     /**
      * 
